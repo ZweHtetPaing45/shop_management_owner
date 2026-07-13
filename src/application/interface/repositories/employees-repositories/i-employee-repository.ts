@@ -1,4 +1,4 @@
-import {User} from "../../../../domain/entities/users/user.entity";
+import {User} from "../../../../domain/entities/employees/employee.entity";
 import {UserDTO} from "../../dtos/employees/employee.dto";
 
 export interface UserRepository{

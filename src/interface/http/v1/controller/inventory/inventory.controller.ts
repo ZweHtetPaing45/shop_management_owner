@@ -16,15 +16,12 @@ export class InventoryController{
 
         try{
 
-            const owner = (req as any).owner;
-
             const {code,item,stock,unit,cost,date} = (req as any).body;
 
             if(!code || !item || !stock || !unit || !cost || !date) throw new AppError('Enter the Inventory full data',500);
 
 
             const data : CreateInventoryDto = {
-                owner_id : owner!.id,
                 code,
                 item,
                 stock_quantiry : stock,

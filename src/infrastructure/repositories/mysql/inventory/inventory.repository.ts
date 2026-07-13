@@ -12,13 +12,13 @@ export class MySQLInventoryRepository implements InventoryRepository{
 
     async create(data: CreateInventoryDto): Promise<Inventory> {
         
-        const [result] : any = await pool.query('insert into owner_inventory(owner_id,code,item,unit,cost,stock_quantiry,date) values(?,?,?,?,?,?,?) ',
-            [data.owner_id,data.code,data.item,data.unit,data.stock_quantiry,data.date]
+        const [result] : any = await pool.query('insert into owner_inventory(code,item,unit,cost,stock_quantiry,date) values(?,?,?,?,?,?,?) ',
+            [data.code,data.item,data.unit,data.stock_quantiry,data.date]
         );
 
         if(!result)throw new AppError("Can not create Inventory",400);
 
-        return new Inventory(result.insertId,data.owner_id,data.code,data.item,data.unit,data.cost,data.stock_quantiry,data.date);
+        return new Inventory(result.insertId,data.code,data.item,data.unit,data.cost,data.stock_quantiry,data.date);
 
     }
 

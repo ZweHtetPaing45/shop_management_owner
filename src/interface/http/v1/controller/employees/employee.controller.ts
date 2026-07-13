@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import {User} from "../../../../../domain/entities/users/user.entity";
+import {User} from "../../../../../domain/entities/employees/employee.entity";
 import {UserDTO} from "../../../../../application/interface/dtos/employees/employee.dto";
 import {CreateUserUseCase} from "../../../../../application/usecase/employees/create-employee.use-case";
 import { AppError } from "../../../../../application/errors/app-error";
@@ -19,20 +19,13 @@ export class UserController{
 
         try{
 
-            const owner = (req as any).owner;
-
             const {name,email,phone,address,branch_id,role_id,password} = req.body;
 
             if(!name || !email || !phone || !address || !branch_id || !role_id || !password){
                 throw new AppError('Enter user Data',500);
             }
 
-            if(!owner){
-                throw new AppError("Owner not found in request", 404);
-            }
-
             const userData: UserDTO = {
-                owner_id: owner!.id,
                 name,
                 email,
                 phone,
