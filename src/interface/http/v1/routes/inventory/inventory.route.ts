@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { inventoryController,authMiddleWare } from "../../../../../container/inventory/inventory.container";
+import { inventoryContainer,authMiddleWare } from "../../../../../container/inventory/inventory.container";
 
 const router = Router();
 
 //Post Method
-router.post('/',authMiddleWare.handle.bind(authMiddleWare),inventoryController.create.bind(inventoryController));
+router.post('/',authMiddleWare.handle.bind(authMiddleWare),inventoryContainer.create.bind(inventoryContainer));
 
 export default router;

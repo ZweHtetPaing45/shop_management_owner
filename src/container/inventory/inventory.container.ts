@@ -13,6 +13,6 @@ const jwtTokenService = new JwtTokenService();
 
 const createInventoryUC = new CreateInventoryUseCase(inventoryRepo);
 
-export const inventoryController = new InventoryController(createInventoryUC);
+export const inventoryContainer = new InventoryController(createInventoryUC);
 
 export const authMiddleWare = new AuthMiddleware(jwtTokenService,ownerRepo);

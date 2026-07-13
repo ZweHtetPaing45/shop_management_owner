@@ -14,6 +14,6 @@ const UserRepo = new MySQLUserRepository();
 
 const createUserUC = new CreateUserUseCase(UserRepo);
 
-export const userController = new UserController(createUserUC);
+export const userContainer = new UserController(createUserUC);
 
 export const authMiddleware = new AuthMiddleware(jwtTokenService, ownerRepo);

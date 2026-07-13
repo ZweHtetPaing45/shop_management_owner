@@ -7,5 +7,5 @@ const shopRepo = new MySQLShopRepository();
 
 const createShopUC = new CreateShopUseCase(shopRepo);
 
-export const shopController = new ShopController(createShopUC);
+export const shopContainer = new ShopController(createShopUC);
 

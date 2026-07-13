@@ -1,9 +1,9 @@
 import Router from "express";
-import { userController,authMiddleware } from "../../../../../container/users/user.container";
+import { userContainer,authMiddleware } from "../../../../../container/users/user.container";
 
 const router = Router();
 
 //Post Method
-router.post('/',authMiddleware.handle.bind(authMiddleware),userController.create.bind(userController));
+router.post('/',authMiddleware.handle.bind(authMiddleware),userContainer.create.bind(userContainer));
 
 export default router;

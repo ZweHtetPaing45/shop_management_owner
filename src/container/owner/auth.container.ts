@@ -10,4 +10,4 @@ const jwtTokenService = new JwtTokenService();
 const createOwnerUC = new CreateOwner(ownerRepo);
 const loginOwnerUC = new LoginOwnerUseCase(ownerRepo, jwtTokenService);
 
-export const ownerController = new OwnerController(createOwnerUC, loginOwnerUC);
+export const ownerContainer = new OwnerController(createOwnerUC, loginOwnerUC);
