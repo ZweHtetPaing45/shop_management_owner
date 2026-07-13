@@ -1,0 +1,14 @@
+export class User {
+
+    constructor(
+        public readonly id : number | null,
+        public name : string,
+        public email : string,
+        public phone : string,
+        public address : string,
+        public roleId : number,
+        public branchId : number,
+        public password : string | null
+    ){}
+
+}
