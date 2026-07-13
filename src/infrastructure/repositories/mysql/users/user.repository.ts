@@ -1,7 +1,7 @@
 import {User} from '../../../../domain/entities/users/user.entity';
-import {UserRepository} from '../../../../application/interface/repositories/users-repositories/i-user-repository';
+import {UserRepository} from '../../../../application/interface/repositories/employees-repositories/i-employee-repository';
 import {Database} from '../../../database/mysql';
-import {UserDTO} from '../../../../application/interface/dtos/users/user.dto';
+import {UserDTO} from '../../../../application/interface/dtos/employees/employee.dto';
 
 
 const pool = Database.getInstance().getPool();

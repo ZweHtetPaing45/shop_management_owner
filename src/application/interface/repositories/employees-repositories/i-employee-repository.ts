@@ -1,5 +1,5 @@
 import {User} from "../../../../domain/entities/users/user.entity";
-import {UserDTO} from "../../dtos/users/user.dto";
+import {UserDTO} from "../../dtos/employees/employee.dto";
 
 export interface UserRepository{
 

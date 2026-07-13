@@ -1,6 +1,6 @@
 import {User} from '../../../domain/entities/users/user.entity';
-import {UserRepository} from '../../interface/repositories/users-repositories/i-user-repository';
-import {UserDTO} from '../../interface/dtos/users/user.dto';
+import {UserRepository} from '../../interface/repositories/employees-repositories/i-employee-repository';
+import {UserDTO} from '../../interface/dtos/employees/employee.dto';
 import {AppError} from '../../errors/app-error';
 
 

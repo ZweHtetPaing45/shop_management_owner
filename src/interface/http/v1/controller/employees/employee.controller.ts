@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import {User} from "../../../../../domain/entities/users/user.entity";
-import {UserDTO} from "../../../../../application/interface/dtos/users/user.dto";
-import {CreateUserUseCase} from "../../../../../application/usecase/users/create-user.use-case";
+import {UserDTO} from "../../../../../application/interface/dtos/employees/employee.dto";
+import {CreateUserUseCase} from "../../../../../application/usecase/employees/create-employee.use-case";
 import { AppError } from "../../../../../application/errors/app-error";
 import { createLogger } from "../../../../../infrastructure/logger/create-logger";
 

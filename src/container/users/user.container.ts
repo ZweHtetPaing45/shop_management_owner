@@ -1,7 +1,7 @@
 
-import {CreateUserUseCase} from '../../application/usecase/users/create-user.use-case';
+import {CreateUserUseCase} from '../../application/usecase/employees/create-employee.use-case';
 import { MySQLUserRepository } from '../../infrastructure/repositories/mysql/users/user.repository';
-import {UserController} from '../../interface/http/v1/controller/users/user.controller';
+import {UserController} from '../../interface/http/v1/controller/employees/employee.controller';
 import { AuthMiddleware } from "../../interface/http/v1/middlewares/auth.middleware";
 import { JwtTokenService } from "../../infrastructure/security/jwt-token-service";
 import { MySQLOwnerRepositories } from "../../infrastructure/repositories/mysql/owner/owner.repository";
