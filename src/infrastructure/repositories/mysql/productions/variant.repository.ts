@@ -9,7 +9,7 @@ const pool = Database.getInstance().getPool();
 export class MySQLProductionVariantRepository implements ProductionVariantRepository{
 
     async create(data: CreateProductionVariantDto): Promise<ProductionVariant> {
-        const [result] : any = await pool.query('insert into production_variant(size) values(?)',
+        const [result] : any = await pool.query('insert into production_variants(size) values(?)',
             [data.size]
         );
 

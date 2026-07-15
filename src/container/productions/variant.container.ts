@@ -1,7 +1,7 @@
 import {MySQLProductionVariantRepository} from "../../infrastructure/repositories/mysql/productions/variant.repository";
 import {CreateProductionVariantUseCase} from "../../application/usecase/production/create-variant.use-case";
 import { JwtTokenService } from "../../infrastructure/security/jwt-token-service";
-import { ProductionVariantController } from "../../interface/http/v1/controller/productions/production.controller";
+import { ProductionVariantController } from "../../interface/http/v1/controller/productions/variant.controller";
 import { MySQLOwnerRepositories } from "../../infrastructure/repositories/mysql/owner/owner.repository";
 import { AuthMiddleware } from "../../interface/http/v1/middlewares/auth.middleware";
 

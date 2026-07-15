@@ -5,6 +5,6 @@ import {authMiddleWare} from "../../../../../container/productions/variant.conta
 const router = Router();
 
 //Post Method
-router.post('/',authMiddleWare.handle.bind(authMiddleWare),productionVariantContainer.create.bind(productionVariantContainer));
+router.post('/',productionVariantContainer.create.bind(productionVariantContainer));
 
 export default router;
