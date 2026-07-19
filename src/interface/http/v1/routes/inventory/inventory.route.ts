@@ -4,6 +4,6 @@ import { inventoryContainer,authMiddleWare } from "../../../../../container/inve
 const router = Router();
 
 //Post Method
-router.post('/',authMiddleWare.handle.bind(authMiddleWare),inventoryContainer.create.bind(inventoryContainer));
+router.post('/',inventoryContainer.create.bind(inventoryContainer));
 
 export default router;

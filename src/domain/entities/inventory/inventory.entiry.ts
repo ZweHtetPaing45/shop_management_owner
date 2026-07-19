@@ -9,7 +9,7 @@ export class Inventory{
         public unit : string,
         public cost : number,
         public stock_quantiry : number,
-        public date : string
+        public date : string | null
     ){}
 
 }

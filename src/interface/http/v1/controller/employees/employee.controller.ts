@@ -1,5 +1,4 @@
 import { Request, Response, NextFunction } from "express";
-import {User} from "../../../../../domain/entities/employees/employee.entity";
 import {UserDTO} from "../../../../../application/interface/dtos/employees/employee.dto";
 import {CreateUserUseCase} from "../../../../../application/usecase/employees/create-employee.use-case";
 import { AppError } from "../../../../../application/errors/app-error";
@@ -7,13 +6,11 @@ import { createLogger } from "../../../../../infrastructure/logger/create-logger
 
 const logger = createLogger();
 
-
 export class UserController{
 
     constructor(
         private createUserUseCase: CreateUserUseCase
     ){}
-
 
     async create(req: Request, res: Response, next: NextFunction){
 

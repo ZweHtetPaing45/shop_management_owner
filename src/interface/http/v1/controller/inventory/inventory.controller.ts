@@ -24,7 +24,7 @@ export class InventoryController{
             const data : CreateInventoryDto = {
                 code,
                 item,
-                stock_quantiry : stock,
+                stock_quantity : stock,
                 unit,
                 cost,
                 date
